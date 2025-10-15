@@ -1,101 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TravelBloom — Home</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TravelBloom — Home</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="brand">
-      <div class="logo">✈️</div>
-      <div class="title">TravelBloom</div>
+    <header class="site-header">
+        <div class="brand">
+            <div class="logo">✈️</div>
+            <div class="title">TravelBloom</div>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+        </nav>
+
+        <div class="search-top">
+            <input id="topSearch" type="search" placeholder="Enter a destination or keyword" />
+            <button id="searchBtn">Search</button>
+            <button id="clearBtn" class="btn-clear">Clear</button>
+        </div>
+        <div id="results" class="results-grid" aria-live="polite"></div>
+
+    </header>
+    <main class="container">
+
+        <!-- Social sidebar -->
+        <aside class="social-sidebar" aria-hidden="true">
+            <a href="#" class="social">t</a>
+            <a href="#" class="social">f</a>
+            <a href="#" class="social">🅘</a>
+            <a href="#" class="social">▶</a>
+        </aside>
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="about-content">
+                <section class="about-section">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h1>ABOUT US</h1>
+                        <p>
+                            Welcome to <strong>Our Company</strong>! We are a team of passionate individuals dedicated
+                            to
+                            providing excellent services and experiences for travelers. Our mission is to
+                            <strong>provide the best experience</strong> for people exploring destinations around the
+                            world.
+                        </p>
+                        <p>
+                            Our values include integrity, innovation, customer satisfaction, and teamwork.
+                            We believe in <strong>putting our customers first</strong> and <strong>working
+                                together</strong>
+                            to achieve our goals.
+                        </p>
+                        <p>
+                            Feel free to explore our website to learn more about what we offer!
+                        </p>
+                    </div>
+                </section>
+
+                <section class="team-section">
+                    <h2>Our Team</h2>
+                    <div class="team-container">
+                        <div class="team-card">
+                            <img src="https://i.pravatar.cc/200?img=12" alt="John Doe">
+                            <h3>John Doe</h3>
+                            <p>John is responsible for overall company strategy and leadership.</p>
+                            <button class="role">CEO</button>
+                        </div>
+
+                        <div class="team-card">
+                            <img src="https://i.pravatar.cc/200?img=32" alt="Celina Thomas">
+                            <h3>Celina Thomas</h3>
+                            <p>Celina leads the creative and marketing team to deliver memorable experiences.</p>
+                            <button class="role">Team Lead</button>
+                        </div>
+
+                        <div class="team-card">
+                            <img src="https://i.pravatar.cc/200?img=45" alt="Mike Tysen">
+                            <h3>Mike Tysen</h3>
+                            <p>Mike oversees operations and ensures timely delivery of our services.</p>
+                            <button class="role">Delivery Head</button>
+                        </div>
+                    </div>
+                </section>
+        </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        &copy; <span id="year"></span> TravelBloom — Designed for Final Project
+    </footer>
+
+    <!-- Modal for details / book -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-inner">
+            <button id="closeModal" class="modal-close">&times;</button>
+            <div id="modalContent"></div>
+        </div>
     </div>
-    <nav class="main-nav">
-      <a href="index.html" class="nav-link active">Home</a>
-      <a href="about.html" class="nav-link">About Us</a>
-      <a href="contact.html" class="nav-link">Contact Us</a>
-    </nav>
-
-    <div class="search-top">
-      <input id="topSearch" type="search" placeholder="Enter a destination or keyword" />
-      <button id="searchBtn">Search</button>
-      <button id="clearBtn" class="btn-clear">Clear</button>
-    </div>
-  </header>
-
-  <!-- Social sidebar -->
-  <aside class="social-sidebar" aria-hidden="true">
-    <a href="#" class="social">t</a>
-    <a href="#" class="social">f</a>
-    <a href="#" class="social">🅘</a>
-    <a href="#" class="social">▶</a>
-  </aside>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <section class="about-section">
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>ABOUT US</h1>
-      <p>
-        Welcome to <strong>Our Company</strong>! We are a team of passionate individuals dedicated to 
-        providing excellent services and experiences for travelers. Our mission is to 
-        <strong>provide the best experience</strong> for people exploring destinations around the world.
-      </p>
-      <p>
-        Our values include integrity, innovation, customer satisfaction, and teamwork. 
-        We believe in <strong>putting our customers first</strong> and <strong>working together</strong> 
-        to achieve our goals.
-      </p>
-      <p>
-        Feel free to explore our website to learn more about what we offer!
-      </p>
-    </div>
-  </section>
-
-  <section class="team-section">
-    <h2>Our Team</h2>
-    <div class="team-container">
-      <div class="team-card">
-        <img src="https://i.pravatar.cc/200?img=12" alt="John Doe">
-        <h3>John Doe</h3>
-        <p>John is responsible for overall company strategy and leadership.</p>
-        <button class="role">CEO</button>
-      </div>
-
-      <div class="team-card">
-        <img src="https://i.pravatar.cc/200?img=32" alt="Celina Thomas">
-        <h3>Celina Thomas</h3>
-        <p>Celina leads the creative and marketing team to deliver memorable experiences.</p>
-        <button class="role">Team Lead</button>
-      </div>
-
-      <div class="team-card">
-        <img src="https://i.pravatar.cc/200?img=45" alt="Mike Tysen">
-        <h3>Mike Tysen</h3>
-        <p>Mike oversees operations and ensures timely delivery of our services.</p>
-        <button class="role">Delivery Head</button>
-      </div>
-    </div>
-  </section>
-  </section>
-
- 
-  <footer class="site-footer">
-    &copy; <span id="year"></span> TravelBloom — Designed for Final Project
-  </footer>
-
-  <!-- Modal for details / book -->
-  <div id="modal" class="modal hidden">
-    <div class="modal-inner">
-      <button id="closeModal" class="modal-close">&times;</button>
-      <div id="modalContent"></div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

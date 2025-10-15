@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TravelBloom — Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="brand">
@@ -23,22 +25,40 @@
       <button id="searchBtn">Search</button>
       <button id="clearBtn" class="btn-clear">Clear</button>
     </div>
+    <div id="results" class="results-grid" aria-live="polite"></div>
+
   </header>
+  <main class="container">
 
-  <!-- Social sidebar -->
-  <aside class="social-sidebar" aria-hidden="true">
-    <a href="#" class="social">t</a>
-    <a href="#" class="social">f</a>
-    <a href="#" class="social">🅘</a>
-    <a href="#" class="social">▶</a>
-  </aside>
+    <!-- Social sidebar -->
+    <aside class="social-sidebar" aria-hidden="true">
+      <a href="#" class="social">t</a>
+      <a href="#" class="social">f</a>
+      <a href="#" class="social">🅘</a>
+      <a href="#" class="social">▶</a>
+    </aside>
 
-  <!-- Hero -->
-  <section class="hero">
-    
-  </section>
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name">
 
-  
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email address">
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Write your message here..."></textarea>
+
+        <button type="submit">Send Message</button>
+
+        <div class="success-message" id="successMessage">
+          ✅ Your message has been sent successfully!
+        </div>
+      </form>
+    </div>
+
+  </main>
 
   <footer class="site-footer">
     &copy; <span id="year"></span> TravelBloom — Designed for Final Project
@@ -48,4 +68,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

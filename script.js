@@ -100,3 +100,41 @@ function displayResults(data, searchInput, resultsContainer, searchBtn) {
         resultsContainer.innerHTML = `<p>No results found for "${query}".</p>`;
     }
 }
+
+
+
+
+
+
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const successMessage = document.getElementById("successMessage");
+
+    if(name === "" || email === "" || message === ""){
+        alert("Please fill in all fields before submitting!");
+        return;
+    }
+
+    // Simple email validation
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if(!email.match(emailPattern)){
+        alert("Please enter a valid email address!");
+        return;
+    }
+
+    // Show success message
+    successMessage.style.display = "block";
+
+    // Clear form fields
+    document.getElementById("contactForm").reset();
+
+    // Hide success message after 3 seconds
+    setTimeout(() => {
+        successMessage.style.display = "none";
+    }, 3000);
+});

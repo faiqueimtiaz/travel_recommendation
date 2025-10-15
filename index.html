@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TravelBloom — Home</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TravelBloom — Home</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="brand">
-      <div class="logo">✈️</div>
-      <div class="title">TravelBloom</div>
-    </div>
-    <nav class="main-nav">
-      <a href="index.html" class="nav-link active">Home</a>
-      <a href="about.html" class="nav-link">About Us</a>
-      <a href="contact.html" class="nav-link">Contact Us</a>
-    </nav>
+    <header class="site-header">
+        <div class="brand">
+            <div class="logo">✈️</div>
+            <div class="title">TravelBloom</div>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+        </nav>
 
-    <div class="search-top">
-      <input id="topSearch" type="search" name="search" value="" placeholder="Enter a destination or keyword" />
-      <button id="searchBtn" type="button">Search</button>
-      <button id="clearBtn" class="btn-clear">Clear</button>
-    </div>
-          <div id="results" class="results-grid" aria-live="polite"></div>
+        <div class="search-top">
+            <input id="topSearch" type="search" name="search" value="" placeholder="Enter a destination or keyword" />
+            <button id="searchBtn" type="button">Search</button>
+            <button id="clearBtn" class="btn-clear">Clear</button>
+        </div>
+        <div id="results" class="results-grid" aria-live="polite"></div>
 
-  </header>
+    </header>
+    <main class="container">
 
-  <!-- Social sidebar -->
-  <aside class="social-sidebar" aria-hidden="true">
-    <a href="#" class="social">t</a>
-    <a href="#" class="social">f</a>
-    <a href="#" class="social">🅘</a>
-    <a href="#" class="social">▶</a>
-  </aside>
+        <!-- Social sidebar -->
+        <aside class="social-sidebar" aria-hidden="true">
+            <a href="#" class="social">t</a>
+            <a href="#" class="social">f</a>
+            <a href="#" class="social">🅘</a>
+            <a href="#" class="social">▶</a>
+        </aside>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>EXPLORE<br/>DREAM<br/>DESTINATION</h1>
-      <p class="hero-sub">
-        It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.
-      </p>
-      <div class="hero-actions">
-        <button id="bookNow">BOOK NOW</button>
-      </div>
-    </div>
-  </section>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>EXPLORE<br />DREAM<br />DESTINATION</h1>
+                <p class="hero-sub">
+                    It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes,
+                    while pursuing the desired destination that captivates the heart and ignites a sense of wonder.
+                </p>
+                <div class="hero-actions">
+                    <button id="bookNow">BOOK NOW</button>
+                </div>
+            </div>
+        </section>
 
-  <!-- Search / Results -->
-  <!--<main class="container">
+        <!-- Search / Results -->
+        <!--<main class="container">
     <section class="search-section">
       <h2>Find personalized recommendations</h2>
       <div class="search-bar">
@@ -66,19 +70,20 @@
       <p id="timeHint" class="time-hint"></p>
     </section>
   </main> -->
+    </main>
 
-  <footer class="site-footer">
-    &copy; <span id="year"></span> TravelBloom — Designed for Final Project
-  </footer>
+        <footer class="site-footer">
+            &copy; <span id="year"></span> TravelBloom — Designed for Final Project
+        </footer>
 
-  <!-- Modal for details / book -->
-  <div id="modal" class="modal hidden">
-    <div class="modal-inner">
-      <button id="closeModal" class="modal-close">&times;</button>
-      <div id="modalContent"></div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+        <!-- Modal for details / book -->
+        <div id="modal" class="modal hidden">
+            <div class="modal-inner">
+                <button id="closeModal" class="modal-close">&times;</button>
+                <div id="modalContent"></div>
+            </div>
+        </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
